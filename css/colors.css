@@ -1,0 +1,11 @@
+/* All color variables */
+
+:root{
+    --color-white: #fff;
+    --color-green: #13BF6D;
+    --color-red: #FC5D3D;
+    --color-grey: #D9D9D9;
+    --color-grey-dark: #363636;
+    --color-orange-dark: #FF7300;
+    --color-orange-light: rgba(255, 115, 0, 0.9);
+}
