@@ -43,3 +43,11 @@
 .text-align-center{
     text-align: center;
 }
+
+.bg-red{
+    background-color: var(--color-red);
+}
+
+.bg-green{
+    background-color: var(--color-green);
+}

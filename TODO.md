@@ -1,1 +1,2 @@
-- Implement UI & Refactor Code
+- Implement UI & Refactor Code [done]
+- JS

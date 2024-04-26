@@ -30,9 +30,9 @@
 <!-- main-container start -->
 <div id="main-container" class="absolute-center">
     <!-- title-bar start -->
-    <div id="title-bar" class="clip-path-poligon std-padding-trbl flex justify-content-space-between">
-        <div id="connected-status">INTERNET CONNECTED</div>
-        <div id="time-elapsed">1h 22m 33s</div>
+    <div id="title-bar" class="clip-path-poligon std-padding-trbl flex justify-content-space-between bg-red">
+        <div id="connected-status">INTERNET UNDEFINED</div>
+        <div id="time-elapsed">0h 0m 0s</div>
     </div>
     <!-- title-bar end -->
     <!-- app-body-container start -->
@@ -41,9 +41,9 @@
         <div id="col-left">
             <!-- conn-data start -->
             <div id="conn-data" class="font-bold flex justify-content-space-between margin-bottom-std text-align-center">
-                <div id="con-data-type" class="">4G <span class="conn-data-label">NETWORK</span></div>
-                <div id="con-data-downlink" class="">1.2mbps <span class="conn-data-label">DOWNLINK</span></div>
-                <div id="con-data-rtt" class="">250ms <span class="conn-data-label">RTT</span></div>
+                <div><span id="conn-data-type">-</span> <span class="conn-data-label">NETWORK</span></div>
+                <div><span id="conn-data-downlink">-</span> <span class="conn-data-label">DOWNLINK</span></div>
+                <div><span id="conn-data-rtt">-</span> <span class="conn-data-label">RTT</span></div>
             </div>
             <!-- conn-data end -->
             <!-- export-container start -->
@@ -61,10 +61,10 @@
         <!-- col-left end -->
         <!-- col-right start -->
         <div id="col-right" class="footer-text">
-            <div id="connection-icon" class="text-align-center">
-                <img src="./assets/connected.png" alt="Connected icon.">
+            <div class="text-align-center">
+                <img id="connection-icon" src="./assets/disconnected.png" alt="Connected icon.">
             </div>
-            <div id="notification-status">Notification Permission: granted</div>
+            <div id="notification-status">Notification Permission: undefined</div>
             <div id="notification-permission">Click to Reset Permission</div>
         </div>
         <!-- col-right end -->

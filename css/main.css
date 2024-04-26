@@ -23,12 +23,12 @@ body{
 }
 
 #title-bar{
-    background-color: var(--color-green);
     color: var(--color-white);
 }
 
 #app-body-container{
     background-color: var(--color-white);
+    
     /* Overriding std-padding-trbl class */
     padding-top: 2.5em;
     padding-bottom: 2em;
@@ -52,14 +52,13 @@ body{
     margin-bottom: 0.4em;
 }
 
-#connection-icon img{
-    width: 120px;
-    /* width: 80px; */
-    margin-bottom: 2em;
-}
-
 #col-right{
     text-align: right;
+}
+
+#connection-icon{
+    width: 120px;
+    margin-bottom: 2em;
 }
 
 #notification-permission{

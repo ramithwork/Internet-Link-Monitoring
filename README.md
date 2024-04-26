@@ -21,6 +21,7 @@ Monitors browser internet connectivity. Sends notifications when connected/disco
 
 # UI/UX
 https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=design&node-id=0%3A1&mode=design&t=JnhE6p0iW3f8bZ1B-1
+*** Modifed in implementation.
 
 
 
