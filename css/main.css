@@ -3,6 +3,7 @@
 @import url('colors.css');
 @import url('clip-path-polygon.css');
 @import url('util.css');
+@import url('button.css');
 
 *{
     margin: 0;
@@ -12,12 +13,13 @@
 }
 
 body{
-    background-color: var(--color-white);
+    background-color: var(--color-grey);
 }
 
 #main-container{
     width: 500px;
     margin: auto; /* horizontally centers the main container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Set box shadow */
 }
 
 #title-bar{
@@ -26,10 +28,19 @@ body{
 }
 
 #app-body-container{
-    background-color: var(--color-grey);
+    background-color: var(--color-white);
     /* Overriding std-padding-trbl class */
     padding-top: 2.5em;
     padding-bottom: 2em;
+}
+
+#conn-data{
+    width: 14em;
+}
+
+.conn-data-label{
+    font-weight: 100;
+    font-size: 0.8rem;
 }
 
 #export-container{
@@ -38,27 +49,12 @@ body{
 }
 
 #export-button-container{
-    background-color: var(--color-orange-dark);
-    color: var(--color-white);
-    cursor: pointer;
     margin-bottom: 0.4em;
-}
-
-#export-button-container:hover{
-    background-color: var(--color-orange-light);
-}
-
-#export-button-icon img{
-    width: 16px;
-    margin-left: 0.5em;
-}
-
-#export-button-text{
-    font-size: 16px;
 }
 
 #connection-icon img{
     width: 120px;
+    /* width: 80px; */
     margin-bottom: 2em;
 }
 
@@ -73,3 +69,33 @@ body{
 #notification-permission:hover{
     text-decoration: none;
 }
+
+/* Mobile View */
+
+#mobile-container{
+    max-width: 300px;
+    display: none;
+}
+
+#no-phone-img{
+    width: 4em;
+    margin-bottom: 1.3em;
+}
+
+#mobile-title{
+    font-size: 1.5rem;
+    margin-bottom: 0.2em;
+    line-height: 0.9em;
+}
+
+#mobile-body{
+    font-size: 0.6rem;
+    margin-bottom: 4em;
+}
+
+
+/* Temp */
+
+/* #main-container{
+    display: none;
+} */

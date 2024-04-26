@@ -1,2 +1,1 @@
-- Implement UI & Refactor Code:
-Mobile screen
+- Implement UI & Refactor Code

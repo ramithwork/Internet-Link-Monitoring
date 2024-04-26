@@ -1,0 +1,18 @@
+@import url(colors.css);
+
+.button-container{
+    background-color: var(--color-orange-dark);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.button-container:hover{
+    background-color: var(--color-orange-light);
+}
+
+.button-icon img{
+    width: 16px;
+    margin-left: 0.5em;
+    position: relative;
+    top: 2px;
+}

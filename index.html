@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNDEFINED - Internet Link Monitoring</title>
+
+    <!-- Preloaders -->
+    <link rel="preload" href="./assets/connected.png" as="image" />
+    <link rel="preload" href="./assets/disconnected.png" as="image" />
+    <link rel="preload" href="./assets/favicon.ico" as="image" />
+    <link rel="preload" href="./assets/faviconDC.ico" as="image" />
+    <link rel="preload" href="./assets/arrow-up-right-from-square.png" as="image" />
+    <link rel="preload" href="./assets/no-phone.png" as="image" />
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
@@ -16,51 +24,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
-    <!-- Preloaders -->
-    <link rel="preload" href="./assets/connected.png" as="image" />
-    <link rel="preload" href="./assets/disconnected.png" as="image" />
-    <link rel="preload" href="./assets/favicon.ico" as="image" />
-    <link rel="preload" href="./assets/faviconDC.ico" as="image" />
-    <link rel="preload" href="./assets/arrow-up-right-from-square.png" as="image" />
-    <link rel="preload" href="./assets/no-phone.png" as="image" />
-
 </head>
 <body>
 
 <!-- main-container start -->
 <div id="main-container" class="absolute-center">
+    <!-- title-bar start -->
     <div id="title-bar" class="clip-path-poligon std-padding-trbl flex justify-content-space-between">
         <div id="connected-status">INTERNET CONNECTED</div>
         <div id="time-elapsed">1h 22m 33s</div>
     </div>
+    <!-- title-bar end -->
+    <!-- app-body-container start -->
     <div id="app-body-container" class="std-padding-trbl flex justify-content-space-between">
+        <!-- col-left start -->
         <div id="col-left">
-            <div id="conn-data" class="font-bold">
-                <div id="con-data-type" class="margin-bottom-std">4G NETWORK</div>
-                <div id="con-data-downlink" class="margin-bottom-std">1.2mbps DOWNLINK</div>
-                <div id="con-data-rtt" class="margin-bottom-std">250ms RTT</div>
+            <!-- conn-data start -->
+            <div id="conn-data" class="font-bold flex justify-content-space-between margin-bottom-std text-align-center">
+                <div id="con-data-type" class="">4G <span class="conn-data-label">NETWORK</span></div>
+                <div id="con-data-downlink" class="">1.2mbps <span class="conn-data-label">DOWNLINK</span></div>
+                <div id="con-data-rtt" class="">250ms <span class="conn-data-label">RTT</span></div>
             </div>
+            <!-- conn-data end -->
+            <!-- export-container start -->
             <div id="export-container">
-                <div id="export-button-container" class="flex clip-path-poligon btn-padding-trbl justify-content-space-between">
-                    <div id="export-button-text">EXPORT LOG to CSV</div>
-                    <div id="export-button-icon">
+                <div id="export-button-container" class="button-container flex clip-path-poligon btn-padding-trbl justify-content-space-between">
+                    <div>EXPORT LOG to CSV</div>
+                    <div class="button-icon">
                         <img src="./assets/arrow-up-right-from-square.png" alt="Arrow icon.">
                     </div>
                 </div>
                 <div id="session" class="footer-text">Session for Thu Apr 25 2024 10:40:39 GMT+0530 (India Standard Time)</div>
             </div>
+            <!-- export-container end -->
         </div>
+        <!-- col-left end -->
+        <!-- col-right start -->
         <div id="col-right" class="footer-text">
-            <div id="connection-icon">
+            <div id="connection-icon" class="text-align-center">
                 <img src="./assets/connected.png" alt="Connected icon.">
             </div>
             <div id="notification-status">Notification Permission: granted</div>
             <div id="notification-permission">Click to Reset Permission</div>
         </div>
+        <!-- col-right end -->
     </div>
+    <!-- app-body-container start -->
 </div>
 <!-- main-container end -->
 
+<!-- mobile-container start -->
+<div id="mobile-container" class="absolute-center">
+    <img id="no-phone-img" class="" src="./assets/no-phone.png" alt="No phone icon.">
+    <div id="mobile-title" class="font-bold">
+        THIS APP IS NOT COMPATIBLE WITH MOBILE DEVICES 
+    </div>
+    <div id="mobile-body">
+        If you opened this window on a desktop/laptop computer, please maximize the window and click the refresh page button below.
+    </div>
+    <div class="button-container flex clip-path-poligon btn-padding-trbl justify-content-space-between">
+        <div class="button-text">REFRESH PAGE</div>
+        <div class="button-icon">
+            <img src="./assets/refresh.png" alt="Refresh icon.">
+        </div>
+    </div>
+</div>
+<!-- mobile-container end -->
 
 </body>
 </html>
