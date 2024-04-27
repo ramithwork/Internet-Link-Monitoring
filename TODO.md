@@ -1,2 +1,4 @@
 - Implement UI & Refactor Code [done]
 - JS
+    - Fix preloading issue: conn img/fav
+    - Publish detectDeviceType, formatTime modules

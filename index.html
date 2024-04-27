@@ -14,7 +14,7 @@
     <link rel="preload" href="./assets/no-phone.png" as="image" />
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link id="favicon" rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
@@ -23,6 +23,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script type="module" src="./js/main.js"></script>
 
 </head>
 <body>
@@ -62,7 +65,7 @@
         <!-- col-right start -->
         <div id="col-right" class="footer-text">
             <div class="text-align-center">
-                <img id="connection-icon" src="./assets/disconnected.png" alt="Connected icon.">
+                <img id="connection-icon" src="./assets/disconnected.png" alt="Connection icon.">
             </div>
             <div id="notification-status">Notification Permission: undefined</div>
             <div id="notification-permission">Click to Reset Permission</div>
@@ -74,7 +77,7 @@
 <!-- main-container end -->
 
 <!-- mobile-container start -->
-<div id="mobile-container" class="absolute-center">
+<div id="mobile-container" class="absolute-center display-none">
     <img id="no-phone-img" class="" src="./assets/no-phone.png" alt="No phone icon.">
     <div id="mobile-title" class="font-bold">
         THIS APP IS NOT COMPATIBLE WITH MOBILE DEVICES 

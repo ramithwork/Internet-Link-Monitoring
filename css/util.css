@@ -51,3 +51,11 @@
 .bg-green{
     background-color: var(--color-green);
 }
+
+.display-block{
+    display: block;
+}
+
+.display-none{
+    display: none;
+}
