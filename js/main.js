@@ -1,7 +1,8 @@
 import { device } from "./detectDeviceType.js" // Returns the type of device.
 import { switchView } from "./viewSwitcher.js" // Switch between mobile/desktop views.
-import { uiUpdate } from "./updateUI.js" // Updating the UI.
+import { uiUpdate, updateSession } from "./updateUI.js" // Updating the UI.
 import { resetCurrentConnManager, updateCurrentConnManager } from "./currentConnManager.js" // Reset the current connection state.
+
 
 resetCurrentConnManager() // Reset the current connection state.
 
@@ -9,7 +10,8 @@ resetCurrentConnManager() // Reset the current connection state.
 switchView(device) // Switching view between desktop/mobile.
 if (device === "desktop"){
     let eventsObjArr = [] // Holds all eventObj.
-    let iniSession = new Date() // Session initialised.
+    const iniSession = new Date() // Session initialised.
+    updateSession(iniSession) // Need to update session when the page loads as it doesn't change while the app is running.
 
     setInterval(function() {
         // Code runs each time as per duration set.

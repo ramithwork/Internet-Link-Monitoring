@@ -56,8 +56,9 @@ body{
     text-align: right;
 }
 
-#connection-icon{
+.connection-icon{
     width: 120px;
+    margin: auto;
     margin-bottom: 2em;
 }
 

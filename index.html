@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNDEFINED - Internet Link Monitoring</title>
-
-    <!-- Preloaders -->
-    <link rel="preload" href="./assets/connected.png" as="image" />
-    <link rel="preload" href="./assets/disconnected.png" as="image" />
-    <link rel="preload" href="./assets/favicon.ico" as="image" />
-    <link rel="preload" href="./assets/faviconDC.ico" as="image" />
-    <link rel="preload" href="./assets/arrow-up-right-from-square.png" as="image" />
-    <link rel="preload" href="./assets/no-phone.png" as="image" />
     
     <!-- Favicon -->
-    <link id="favicon" rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link id="favicon-con" rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
@@ -64,8 +56,9 @@
         <!-- col-left end -->
         <!-- col-right start -->
         <div id="col-right" class="footer-text">
-            <div class="text-align-center">
-                <img id="connection-icon" src="./assets/disconnected.png" alt="Connection icon.">
+            <div>
+                <img id="connected-icon" class="connection-icon" src="./assets/connected.png" alt="Connected icon.">
+                <img id="disconnected-icon" class="connection-icon" src="./assets/disconnected.png" alt="Disconnected icon.">
             </div>
             <div id="notification-status">Notification Permission: undefined</div>
             <div id="notification-permission">Click to Reset Permission</div>

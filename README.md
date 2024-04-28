@@ -17,7 +17,7 @@ Monitors browser internet connectivity. Sends notifications when connected/disco
 - Log Export.
 - Notifications.
 - Disable when not desktop.
-- Favicon & Title should reflect connection state.
+- Title should reflect connection state.
 
 # UI/UX
 https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=design&node-id=0%3A1&mode=design&t=JnhE6p0iW3f8bZ1B-1
@@ -25,4 +25,15 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 
 
 
-# Version 1.0.0
+# Version 1.0.1
+
+## Known Issues
+- Connection favicon preloading fails when offline. This is scheduled to be fixed when the project is released as a Progressive Web App (PWA) with a Service Worker.
+
+## Bug Fixes
+- Offline connection icon not appearing fixed.
+
+
+
+# Feature Pipeline
+- Show Connection State averages.

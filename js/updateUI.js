@@ -7,6 +7,8 @@ import { formatTime } from "./formatTime.js"
 
 function updateUI(event){
     // Main function to update UI elements.
+
+    // Core UI functions.
     updateTitleBarBG(event)
     updateConnectedStatus(event)
     updateCurrentConnectionTimeElapsed(event)
@@ -14,7 +16,6 @@ function updateUI(event){
     updateDownlink(event)
     updateRTT(event)
     updateConnectionIcon(event)
-    updateFavicon(event)
     updateTitle(event)
 }
 
@@ -87,23 +88,19 @@ function updateRTT(eventObj){
 
 function updateConnectionIcon(eventObj){
     // Change the connection icon.
-    let connectionIconIMG = document.getElementById("connection-icon")
+    let connectedImgIcon = document.getElementById("connected-icon")
+    let disconnectedImgIcon = document.getElementById("disconnected-icon")
     if(eventObj.connStat){
-        connectionIconIMG.src = "./assets/connected.png"
+        connectedImgIcon.classList.remove("display-none")
+        connectedImgIcon.classList.add("display-block")
+        disconnectedImgIcon.classList.remove("display-block")
+        disconnectedImgIcon.classList.add("display-none")
     }
     else{
-        connectionIconIMG.src = "./assets/disconnected.png"
-    }
-}
-
-function updateFavicon(eventObj){
-    // Change the favicon.
-    let favicon = document.getElementById("favicon")
-    if(eventObj.connStat){
-        favicon.href = "./assets/favicon.ico"
-    }
-    else{
-        favicon.href = "./assets/faviconDC.ico"
+        connectedImgIcon.classList.remove("display-block")
+        connectedImgIcon.classList.add("display-none")
+        disconnectedImgIcon.classList.remove("display-none")
+        disconnectedImgIcon.classList.add("display-block")
     }
 }
 
@@ -118,4 +115,11 @@ function updateTitle(eventObj){
     }
 }
 
+function updateSession(session){
+    // Change the session
+    let sessionDiv = document.getElementById("session")
+    sessionDiv.innerText = `Session for ${session}`
+}
+
 export { updateUI as uiUpdate }
+export { updateSession as updateSession }

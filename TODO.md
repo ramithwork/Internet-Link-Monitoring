@@ -1,4 +1,6 @@
 - Implement UI & Refactor Code [done]
 - JS
-    - Fix preloading issue: conn img/fav
+    - Notifications implementation.
+    - Clean loading screen.
     - Publish detectDeviceType, formatTime modules
+    - PWA version of the app.
