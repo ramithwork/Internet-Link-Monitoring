@@ -4,6 +4,11 @@
 import { currentConnManagerObj } from "./currentConnManager.js"
 import { formatTime } from "./formatTime.js"
 
+let notificationStateObj = {
+    con: false,
+    dis: false
+}
+
 
 function updateUI(event){
     // Main function to update UI elements.
@@ -17,6 +22,10 @@ function updateUI(event){
     updateRTT(event)
     updateConnectionIcon(event)
     updateTitle(event)
+
+    // Validate and trigger notification.
+    notificationTrigger()
+
 }
 
 function updateTitleBarBG(eventObj){
@@ -121,5 +130,76 @@ function updateSession(session){
     sessionDiv.innerText = `Session for ${session}`
 }
 
+function updateNotificationStatus(result){
+    // Change notification-status.
+    let notificationStatusDiv = document.getElementById("notification-status")
+    notificationStatusDiv.innerText = `Notification Permission: ${result}`
+    if (result === "granted"){
+        notificationStatusDiv.classList.add("color-green")
+        notificationStatusDiv.classList.remove("color-red")
+    }
+    else if (result === "denied"){
+        notificationStatusDiv.classList.add("color-red")
+        notificationStatusDiv.classList.remove("color-green")
+    }
+}
+
+function notificationTrigger(){
+    // Manages the notification tiggering event.
+    if (navigator.onLine && !notificationStateObj.con){
+        // App is online and hasn't been notified.
+        
+        renderNotification() // Create and show the notification.
+        
+        // Set notification tigger management object to.
+        notificationStateObj.con = true
+        notificationStateObj.dis = false
+
+    }
+    else if (!navigator.onLine && !notificationStateObj.dis){
+        // App is offline and hasn't been notified.
+
+        renderNotification() // Create and show the notification.
+
+        // Set notification tigger management object.
+        notificationStateObj.con = false
+        notificationStateObj.dis = true
+    }
+}
+
+function renderNotification(){
+    // Create and trigger the notification.
+    let connectedSatusString
+    if (navigator.onLine){
+        connectedSatusString = "CONNECTED 🟢"
+    }
+    else{
+        connectedSatusString = "DISCONNECTED 🔴"
+    }
+    if (Notification.permission === 'granted') {
+        var notification = new Notification('Internet Connectivity Alert', {
+            body: `Internet ${connectedSatusString}`,
+            icon: iconSwitcher() 
+        });
+
+        // Close the notification after 5 seconds
+        setTimeout(notification.close.bind(notification), 5000);
+    } else {
+        console.log('Notification permission not granted.');
+    }
+}
+
+function iconSwitcher(){
+    // Switch the notification icon for connected/disconnected.
+    if (navigator.onLine){
+        return "./assets/connected.png"
+    }
+    else if (!navigator.onLine){
+        return "./assets/disconnected.png"
+    }
+}
+
+
 export { updateUI as uiUpdate }
 export { updateSession as updateSession }
+export { updateNotificationStatus as uiUpdateNotificationStatus }

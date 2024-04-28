@@ -1,6 +1,6 @@
 - Implement UI & Refactor Code [done]
 - JS
-    - Notifications implementation.
+    - Notifications implementation. - Reset Permission
     - Clean loading screen.
     - Publish detectDeviceType, formatTime modules
     - PWA version of the app.

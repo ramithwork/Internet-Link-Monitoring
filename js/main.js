@@ -1,6 +1,6 @@
 import { device } from "./detectDeviceType.js" // Returns the type of device.
 import { switchView } from "./viewSwitcher.js" // Switch between mobile/desktop views.
-import { uiUpdate, updateSession } from "./updateUI.js" // Updating the UI.
+import { uiUpdate, updateSession, uiUpdateNotificationStatus } from "./updateUI.js" // Updating the UI.
 import { resetCurrentConnManager, updateCurrentConnManager } from "./currentConnManager.js" // Reset the current connection state.
 
 
@@ -32,8 +32,13 @@ if (device === "desktop"){
         
         uiUpdate(eventObj) // Update the UI elements based on online/offline and colours for connection data.
 
-        // console.log(eventsObjArr)
-    
     }, 1000)
+
+    Notification.requestPermission().then(function (result) {
+        // Request permission for notifications
+        uiUpdateNotificationStatus(result) // Updating the UI
+    });
+
+
 }
 
