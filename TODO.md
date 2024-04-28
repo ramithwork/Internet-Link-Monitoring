@@ -1,6 +1,5 @@
 - Implement UI & Refactor Code [done]
-- JS
-    - Export Log.
-    - Clean loading screen.
-    - Publish detectDeviceType, formatTime modules
-    - PWA version of the app.
+- JS Code while Refactor [done]
+- UI/UX - Clean loading screen.
+- Publish detectDeviceType, formatTime modules, csvConverter, csvDownloader
+- PWA version of the app.

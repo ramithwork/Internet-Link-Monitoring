@@ -2,15 +2,19 @@ import { device } from "./detectDeviceType.js" // Returns the type of device.
 import { switchView } from "./viewSwitcher.js" // Switch between mobile/desktop views.
 import { uiUpdate, updateSession, uiUpdateNotificationStatus } from "./updateUI.js" // Updating the UI.
 import { resetCurrentConnManager, updateCurrentConnManager } from "./currentConnManager.js" // Reset the current connection state.
-
+import { csvConverter } from "./csvConverter.js" // Returns CSV string for file download.
+import { csvDownloader } from "./csvDownloader.js" // Download CSV file with specified filename.
 
 resetCurrentConnManager() // Reset the current connection state.
+
+let eventsObjArr = [] // Holds all eventObj.
+const iniSession = new Date() // Session initialised.
 
 // DEMSKTOP/MOBILE decision.
 switchView(device) // Switching view between desktop/mobile.
 if (device === "desktop"){
-    let eventsObjArr = [] // Holds all eventObj.
-    const iniSession = new Date() // Session initialised.
+    // let eventsObjArr = [] // Holds all eventObj.
+    // const iniSession = new Date() // Session initialised.
     updateSession(iniSession) // Need to update session when the page loads as it doesn't change while the app is running.
 
     setInterval(function() {
@@ -45,3 +49,12 @@ function requestNotificationPermission(){
         uiUpdateNotificationStatus(result) // Updating the UI
     });
 }
+
+// Exporting Log
+const exportButtonDiv = document.getElementById("export-button-container")
+// Exporting the log using the csvConverter & csvDownloader modules.
+exportButtonDiv.addEventListener("click", function(){
+    const csvString = csvConverter.arrayToCSV(eventsObjArr)
+    const filename = `Log_${iniSession.getFullYear()}-${iniSession.getMonth() + 1}-${iniSession.getDate()}_${Date.now()}`
+    csvDownloader.downloadCSV(csvString, filename)
+})
