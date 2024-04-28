@@ -25,15 +25,15 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 
 
 
-# Version 1.0.2
+# Version 1.0.3
 
 ## Known Issues
 - Connection favicon preloading fails when offline. This is scheduled to be fixed when the project is released as a Progressive Web App (PWA) with a Service Worker.
+- Requesting Permission by button:
+    Unable to implement this feature.
 
 ## Bug Fixes
 - Offline connection icon not appearing fixed.
-
-
 
 # Feature Pipeline
 - Show Connection State averages.

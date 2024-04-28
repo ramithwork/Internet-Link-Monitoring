@@ -133,14 +133,16 @@ function updateSession(session){
 function updateNotificationStatus(result){
     // Change notification-status.
     let notificationStatusDiv = document.getElementById("notification-status")
-    notificationStatusDiv.innerText = `Notification Permission: ${result}`
+    
     if (result === "granted"){
         notificationStatusDiv.classList.add("color-green")
         notificationStatusDiv.classList.remove("color-red")
+        notificationStatusDiv.innerText = `Notifications Enabled`
     }
     else if (result === "denied"){
         notificationStatusDiv.classList.add("color-red")
         notificationStatusDiv.classList.remove("color-green")
+        notificationStatusDiv.innerText = `Notifications Disabled`
     }
 }
 

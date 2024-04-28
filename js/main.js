@@ -34,11 +34,14 @@ if (device === "desktop"){
 
     }, 1000)
 
+    requestNotificationPermission() // Initiates notification permission and triggering.
+
+}
+
+// Initiates notification permission and tiggering.
+function requestNotificationPermission(){
     Notification.requestPermission().then(function (result) {
         // Request permission for notifications
         uiUpdateNotificationStatus(result) // Updating the UI
     });
-
-
 }
-

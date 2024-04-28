@@ -62,14 +62,6 @@ body{
     margin-bottom: 2em;
 }
 
-#notification-permission{
-    text-decoration: underline;
-    cursor: pointer;
-}
-#notification-permission:hover{
-    text-decoration: none;
-}
-
 /* Mobile View */
 
 #mobile-container{
