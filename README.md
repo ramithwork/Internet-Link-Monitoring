@@ -1,6 +1,8 @@
 # Internet-Link-Monitoring
 Monitors browser internet connectivity. Sends notifications when connected/disconnected. Maintain and export log.
 
+App: https://4uwebsite.github.io/Internet-Link-Monitoring/
+
 # Features:
 - Internet connected/disconnected status.
 - Connection Data.
@@ -25,7 +27,7 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 
 
 
-# Version 1.0.6
+# Version 1.0.7
 
 ## Known Issues
 - Connection favicon preloading fails when offline. This is scheduled to be fixed when the project is released as a Progressive Web App (PWA) with a Service Worker.
@@ -36,6 +38,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Show Connection State averages.
 
 # Versioning
+1.0.7
+- Non-code fixes.
 1.0.6
 - Non-code fixes.
 - Completed build.
