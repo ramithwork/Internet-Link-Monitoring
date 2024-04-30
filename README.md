@@ -27,7 +27,7 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 
 
 
-# Version 1.0.7
+# Version 1.0.8
 
 ## Known Issues
 - Connection favicon preloading fails when offline. This is scheduled to be fixed when the project is released as a Progressive Web App (PWA) with a Service Worker.
@@ -38,6 +38,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Show Connection State averages.
 
 # Versioning
+1.0.8
+- Mobile view Refresh Page button implemented. 
 1.0.7
 - Non-code fixes.
 1.0.6

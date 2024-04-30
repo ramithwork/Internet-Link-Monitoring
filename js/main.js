@@ -58,3 +58,9 @@ exportButtonDiv.addEventListener("click", function(){
     const filename = `Log_${iniSession.getFullYear()}-${iniSession.getMonth() + 1}-${iniSession.getDate()}_${Date.now()}`
     csvDownloader.downloadCSV(csvString, filename)
 })
+
+// Mobile view refresh button.
+const refreshBtn = document.getElementById("refresh-button")
+refreshBtn.addEventListener("click", function(){
+    location.reload()
+})

@@ -1,1 +1,0 @@
-- PWA version of the app.
