@@ -27,7 +27,7 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 
 
 
-# Version 2.0.0
+# Version 2.0.2
 
 ## Known Issues
 - Connection favicon preloading fails when offline. This is scheduled to be fixed when the project is released as a Progressive Web App (PWA) with a Service Worker.
@@ -36,8 +36,21 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 
 # Feature Pipeline
 - Show Connection State averages.
+- Data usage meter.
 
 # Versioning
+2.0.2
+- Non-code changes.
+- Service worker implementation:
+    - Reg [done]
+    - Install [done]
+    - Activated [done]
+    - Precaching [done]
+    - fetch handling [done]
+    - Cache versioning [NEXT]
+2.0.1
+- Non-code changes.
+- Service worker implementation
 2.0.0
 - Manifest file and PWA compatibility.
 - Currently only Desktop support.

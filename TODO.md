@@ -1,3 +1,15 @@
+- Service Worker implementation:
+  - Reg [done]
+  - Install [done]
+  - Activated [done]
+  - Precaching [done]
+  - fetch handling [done]
+  - Cache versioning [NEXT]
 - Add branding and info guides.
 - Make mobile ready.
 - Add mobile screenshot to manifest.
+- SEO essentials
+- Distribution
+  - Remove non-essential consol.logs.
+  - Opengraph implementation.
+  - Social sharing.
