@@ -26,6 +26,7 @@ const assets = [
     '/js/detectDeviceType.js',
     '/js/formatTime.js',
     '/js/main.js',
+    'js/sw-support.js',
     '/js/updateUI.js',
     '/js/viewSwitcher.js',
     // Fonts
