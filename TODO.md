@@ -1,0 +1,3 @@
+- Add branding and info guides.
+- Make mobile ready.
+- Add mobile screenshot to manifest.

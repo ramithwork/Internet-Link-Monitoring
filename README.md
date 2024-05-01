@@ -1,5 +1,5 @@
 # Internet-Link-Monitoring
-Monitors browser internet connectivity. Sends notifications when connected/disconnected. Maintain and export log.
+A PWA (Progressive Web App) that monitors browser internet connectivity. Sends notifications when connected/disconnected. Maintain and export log.
 
 App: https://4uwebsite.github.io/Internet-Link-Monitoring/
 
@@ -27,7 +27,7 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 
 
 
-# Version 1.0.8
+# Version 2.0.0
 
 ## Known Issues
 - Connection favicon preloading fails when offline. This is scheduled to be fixed when the project is released as a Progressive Web App (PWA) with a Service Worker.
@@ -38,6 +38,9 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Show Connection State averages.
 
 # Versioning
+2.0.0
+- Manifest file and PWA compatibility.
+- Currently only Desktop support.
 1.0.8
 - Mobile view Refresh Page button implemented. 
 1.0.7
