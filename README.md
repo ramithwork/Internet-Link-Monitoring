@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.17
+- Bug fix: Root path should be given as "/". Other paths in folders without "/".
 2.0.16
 - Modified asset path to be like this "css/button.css".
 2.0.15
