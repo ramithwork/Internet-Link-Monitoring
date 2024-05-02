@@ -37,6 +37,9 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.11
+- Try/catch in assets caching function removed.
+- Caching only pages and images.
 2.0.10
 - Bug Fix: Assets not caching. Added a try/catch block to assets caching function. 
 2.0.9

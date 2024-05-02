@@ -12,42 +12,38 @@ const assets = [
     '/assets/favicon.ico',
     '/assets/faviconDC.ico',
     '/assets/no-phone.png',
-    '/assets/refresh.png',
-    // CSS
-    '/css/button.css',
-    '/css/clip-path-polygon.css',
-    '/css/colors.css',
-    '/css/main.css',
-    '/css/util.css',
-    // JS
-    '/js/csvConverter.js',
-    '/js/csvDownloader.js',
-    '/js/currentConnManager.js',
-    '/js/detectDeviceType.js',
-    '/js/formatTime.js',
-    '/js/main.js',
-    'js/sw-support.js',
-    '/js/updateUI.js',
-    '/js/viewSwitcher.js',
-    // Fonts
-    'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'
+    '/assets/refresh.png'
+    // // CSS
+    // '/css/button.css',
+    // '/css/clip-path-polygon.css',
+    // '/css/colors.css',
+    // '/css/main.css',
+    // '/css/util.css',
+    // // JS
+    // '/js/csvConverter.js',
+    // '/js/csvDownloader.js',
+    // '/js/currentConnManager.js',
+    // '/js/detectDeviceType.js',
+    // '/js/formatTime.js',
+    // '/js/main.js',
+    // 'js/sw-support.js',
+    // '/js/updateUI.js',
+    // '/js/viewSwitcher.js',
+    // // Fonts
+    // 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'
 ]
 
 // Validate Service Worker installed and caching shell assets.
 self.addEventListener('install', evt => { 
     console.log('Service Worker Installed.')
-    try {
-        // install/caching are async events. So wait until completed.
-        evt.waitUntil(
-            caches.open(staticCacheName).then(cache => {
-                console.log('Caching assets...')
-                cache.addAll(assets) // Assets array passed.
-                console.log('Assets cached.')
-            })
-        )
-    } catch (error) {
-        console.log('Error in: Validate Service Worker installed and caching shell assets.', error)
-    }
+    // install/caching are async events. So wait until completed.
+    evt.waitUntil(
+        caches.open(staticCacheName).then(cache => {
+            console.log('Caching assets...')
+            cache.addAll(assets) // Assets array passed.
+            console.log('Assets cached.')
+        })
+    )
 })
 
 // Validate Service Worker activated.
