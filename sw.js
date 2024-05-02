@@ -4,15 +4,15 @@ const staticCacheName = 'site-static' // Use a const because it changes with ver
 const assets = [
     // Pages
     '/',
-    '/index.html'
-    // // Images
-    // '/assets/arrow-up-right-from-square.png',
-    // '/assets/connected.png',
-    // '/assets/disconnected.png',
-    // '/assets/favicon.ico',
-    // '/assets/faviconDC.ico',
-    // '/assets/no-phone.png',
-    // '/assets/refresh.png',
+    '/index.html',
+    // Images
+    '/assets/arrow-up-right-from-square.png',
+    '/assets/connected.png',
+    '/assets/disconnected.png',
+    '/assets/favicon.ico',
+    '/assets/faviconDC.ico',
+    '/assets/no-phone.png',
+    '/assets/refresh.png'
     // // CSS
     // '/css/button.css',
     // '/css/clip-path-polygon.css',

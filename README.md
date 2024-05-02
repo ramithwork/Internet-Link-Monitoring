@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.13
+- Only caching index page and images. 
 2.0.12
 - Only caching index page. 
 2.0.11
