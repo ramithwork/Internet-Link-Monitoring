@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.5
+- Relative paths modified for sw.js and sw-support.js.
 2.0.4
 - Non-code changes.
 - Switched load order so sw-support.js loads before manifest.

@@ -3,7 +3,7 @@
 
 // Validate the Service Worker is registered.
 if ('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/sw.js') // async. Returns a promise.
+    navigator.serviceWorker.register('./sw.js') // async. Returns a promise.
         .then((reg) => { console.log('Service Worker Registered.') })
         .catch((err) => { console.log('Service Worker NOT Registered.', err) })
 }
