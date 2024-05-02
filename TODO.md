@@ -5,7 +5,8 @@
   - Precaching [done]
   - fetch handling [done]
   - Cache versioning [done]
-  - Getting cached assets [NEXT]
+  - Getting dynamic caching [NEXT] - why are shell assets getting added to dynamic cache?
+- Remove about page when done or modify it.
 - Safari Bug (Notifications). Check browser compatibility.
 - Add branding and info guides.
 - Make mobile ready.

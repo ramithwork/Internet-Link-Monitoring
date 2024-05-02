@@ -1,5 +1,8 @@
 // Main Service Worker.
-const staticCacheName = 'ILM-v1-static' // Use a const because it changes with versioning.
+
+// Use a const because it changes with versioning.
+const staticCacheName = 'ILM-v2-static' // Static shell-assets cache.
+const dynamicCacheName = 'ILM-v2-dynamic' // Dynamic (non-shell) assets cache.
 
 // Easy to maintain assets like this and just pass the array into the function. 
 // Important: Root path should be given as "/". Other paths without "/".
@@ -65,15 +68,34 @@ self.addEventListener('activate', evt => {
     )
 })
 
-// Intercepting featch events and matching caches.
+// Intercepting featch events and matching caches. Caching new assets to dynamic cache.
 self.addEventListener('fetch', evt => { 
     // console.log('Intercepting fetch events and matching caches...')
     // Using the fetch events respondWith method to match the request with caches.
     evt.respondWith(
         // async function. If not in cache return the original event request.
         caches.match(evt.request).then(cacheRes => {
-            return cacheRes || fetch(evt.request)
+            return cacheRes || fetch(evt.request).then(fetchRes => {
+                return caches.open(dynamicCacheName).then(cache => {
+                    cache.put(evt.request.url, fetchRes.clone())
+                    return fetchRes
+                })
+            })
         })
     )
     // console.log('Fetch event processed.')
 })
+
+// self.addEventListener('fetch', evt => { 
+//     // console.log('Fetch Events:', evt) 
+//     evt.respondWith(
+//         caches.match(evt.request).then(cacheRes => {
+//             return cacheRes || fetch(evt.request).then(fetchRes => {
+//                 return caches.open(dynamicCacheName).then(cache => {
+//                     cache.put(evt.request.url, fetchRes.clone())
+//                     return fetchRes
+//                 })
+//             })
+//         })
+//     )
+// })
