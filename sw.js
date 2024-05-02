@@ -3,10 +3,10 @@ const staticCacheName = 'site-static' // Use a const because it changes with ver
 // Easy to maintain assets like this and just pass the array into the function. 
 const assets = [
     // Pages
-    '/',
-    '/index.html',
+    './',
+    './index.html',
     // Images
-    '/assets/arrow-up-right-from-square.png',
+    './assets/arrow-up-right-from-square.png',
     '/assets/connected.png',
     '/assets/disconnected.png',
     '/assets/favicon.ico',
