@@ -37,6 +37,9 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.18
+- Non-code changes.
+- Service Worker cache versioning implemented. 
 2.0.17
 - Bug fix: Root path should be given as "/". Other paths in folders without "/".
 2.0.16

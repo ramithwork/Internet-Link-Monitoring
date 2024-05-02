@@ -1,5 +1,5 @@
 // Main Service Worker.
-const staticCacheName = 'site-static' // Use a const because it changes with versioning.
+const staticCacheName = 'ILM-v1-static' // Use a const because it changes with versioning.
 
 // Easy to maintain assets like this and just pass the array into the function. 
 // Important: Root path should be given as "/". Other paths without "/".
@@ -48,12 +48,26 @@ self.addEventListener('install', evt => {
     )
 })
 
-// Validate Service Worker activated.
-self.addEventListener('activate', evt => { console.log('Service Worker Activated.') })
+// Validate Service Worker activated,
+// Delete old caches.
+self.addEventListener('activate', evt => { 
+    console.log('Service Worker Activated.')
+    // async method. Must wait until all promises (promise per cache) is resolved.
+    evt.waitUntil(
+        // caches gets the keys and passes it to an => function.
+        caches.keys().then(keys => {
+            // Promise all is an async functon that returns all promises when resolved.
+            return Promise.all(keys
+                .filter(key => key !== staticCacheName) // Filtering and creating a promises array without the current cache name.
+                .map(key => caches.delete(key)) // Deleting all othet keys(cahses) except current cache.
+            )
+        })
+    )
+})
 
 // Intercepting featch events and matching caches.
 self.addEventListener('fetch', evt => { 
-    console.log('Intercepting fetch events and matching caches...')
+    // console.log('Intercepting fetch events and matching caches...')
     // Using the fetch events respondWith method to match the request with caches.
     evt.respondWith(
         // async function. If not in cache return the original event request.
@@ -61,5 +75,5 @@ self.addEventListener('fetch', evt => {
             return cacheRes || fetch(evt.request)
         })
     )
-    console.log('Fetch event processed.')
+    // console.log('Fetch event processed.')
 })

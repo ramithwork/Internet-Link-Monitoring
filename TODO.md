@@ -4,7 +4,8 @@
   - Activated [done]
   - Precaching [done]
   - fetch handling [done]
-  - Cache versioning [NEXT]
+  - Cache versioning [done]
+  - Getting cached assets [NEXT]
 - Safari Bug (Notifications). Check browser compatibility.
 - Add branding and info guides.
 - Make mobile ready.
