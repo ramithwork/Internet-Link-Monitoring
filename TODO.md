@@ -5,6 +5,7 @@
   - Precaching [done]
   - fetch handling [done]
   - Cache versioning [NEXT]
+- Safari Bug (Notifications). Check browser compatibility.
 - Add branding and info guides.
 - Make mobile ready.
 - Add mobile screenshot to manifest.

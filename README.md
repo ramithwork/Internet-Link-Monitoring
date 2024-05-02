@@ -37,6 +37,9 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.4
+- Non-code changes.
+- Switched load order so sw-support.js loads before manifest.
 2.0.3
 - Bug Fix. sw-support.js wasn't added to the assets array in the Service Worker.
 2.0.2
