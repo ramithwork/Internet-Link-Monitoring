@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.16
+- Modified asset path to be like this "css/button.css".
 2.0.15
 - Only caching index page and one css file. No images.
 2.0.14

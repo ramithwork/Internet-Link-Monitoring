@@ -14,7 +14,7 @@ const assets = [
     // '/assets/no-phone.png',
     // '/assets/refresh.png',
     // CSS
-    '/css/button.css'
+    'css/button.css'
     // '/css/clip-path-polygon.css',
     // '/css/colors.css',
     // '/css/main.css',
