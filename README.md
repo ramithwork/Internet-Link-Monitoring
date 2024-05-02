@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.6
+- Relative paths modified inside index page and manifest.
 2.0.5
 - Relative paths modified for sw.js and sw-support.js.
 2.0.4

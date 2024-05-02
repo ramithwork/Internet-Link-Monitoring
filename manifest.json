@@ -2,14 +2,14 @@
   "name": "Internet Link Monitoring by W4U",
   "short_name": "ILM",
   "description": "Monitors browser internet connectivity. Sends notifications when connected/disconnected. Maintain and export log.",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#FF7300",
   "theme_color": "#FF7300",
   "orientation": "portrait-primary",
   "screenshots": [
     {
-      "src": "assets/screenshot2.png",
+      "src": "./assets/screenshot2.png",
       "type": "image/jpg",
       "sizes": "720x540",
       "form_factor": "wide"
@@ -17,7 +17,7 @@
   ],
   "icons": [
     {
-      "src": "/assets/app-images/android-chrome-192x192.png",
+      "src": "./assets/app-images/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
