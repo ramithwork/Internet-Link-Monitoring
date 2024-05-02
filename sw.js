@@ -3,10 +3,10 @@ const staticCacheName = 'site-static' // Use a const because it changes with ver
 // Easy to maintain assets like this and just pass the array into the function. 
 const assets = [
     // Pages
-    './',
-    './index.html',
+    '/',
+    '/index.html',
     // Images
-    './assets/arrow-up-right-from-square.png',
+    '/assets/arrow-up-right-from-square.png',
     '/assets/connected.png',
     '/assets/disconnected.png',
     '/assets/favicon.ico',
@@ -36,14 +36,18 @@ const assets = [
 // Validate Service Worker installed and caching shell assets.
 self.addEventListener('install', evt => { 
     console.log('Service Worker Installed.')
-    // install/caching are async events. So wait until completed.
-    evt.waitUntil(
-        caches.open(staticCacheName).then(cache => {
-            console.log('Caching assets...')
-            cache.addAll(assets) // Assets array passed.
-            console.log('Assets cached.')
-        })
-    )
+    try {
+        // install/caching are async events. So wait until completed.
+        evt.waitUntil(
+            caches.open(staticCacheName).then(cache => {
+                console.log('Caching assets...')
+                cache.addAll(assets) // Assets array passed.
+                console.log('Assets cached.')
+            })
+        )
+    } catch (error) {
+        console.log('Error in: Validate Service Worker installed and caching shell assets.', error)
+    }
 })
 
 // Validate Service Worker activated.

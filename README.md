@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.10
+- Bug Fix: Assets not caching. Added a try/catch block to assets caching function. 
 2.0.9
 - Bug Fix: Assets not caching. Changed paths for index and one image in the sw.js assets const.
 2.0.8
