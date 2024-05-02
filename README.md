@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.8
+- App icons relative paths in manifest fixed. 
 2.0.7
 - Colours for theme/apple-app-bar (index head) changed to dark orange (#FF7300).
 2.0.6
