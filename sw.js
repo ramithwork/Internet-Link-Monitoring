@@ -6,15 +6,15 @@ const assets = [
     '/',
     '/index.html',
     // Images
-    '/assets/arrow-up-right-from-square.png'
+    // '/assets/arrow-up-right-from-square.png',
     // '/assets/connected.png',
     // '/assets/disconnected.png',
     // '/assets/favicon.ico',
     // '/assets/faviconDC.ico',
     // '/assets/no-phone.png',
     // '/assets/refresh.png',
-    // // CSS
-    // '/css/button.css',
+    // CSS
+    '/css/button.css'
     // '/css/clip-path-polygon.css',
     // '/css/colors.css',
     // '/css/main.css',
