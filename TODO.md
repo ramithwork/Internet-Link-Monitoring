@@ -5,9 +5,11 @@
   - Precaching [done]
   - fetch handling [done]
   - Cache versioning [done]
-  - Getting dynamic caching [NEXT]
-    - why are shell assets getting added to dynamic cache? [IGNORED]
-    - app doesn't require dynamic caching. Remove feature.
+
+*********************************************
+- Discontinue project from here and focus on a newer mobile capable version.
+*********************************************
+
 - Safari Bug (Notifications). Check browser compatibility.
 - Add branding and info guides.
 - Make mobile ready.

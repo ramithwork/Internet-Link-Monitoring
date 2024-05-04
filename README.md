@@ -37,6 +37,8 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.22
+- Final build. This branch will be merged with main.
 2.0.21
 - Fetching dynamic assets was removed. Only caching static (shell) assets.
 2.0.20
