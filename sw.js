@@ -75,27 +75,8 @@ self.addEventListener('fetch', evt => {
     evt.respondWith(
         // async function. If not in cache return the original event request.
         caches.match(evt.request).then(cacheRes => {
-            return cacheRes || fetch(evt.request).then(fetchRes => {
-                return caches.open(dynamicCacheName).then(cache => {
-                    cache.put(evt.request.url, fetchRes.clone())
-                    return fetchRes
-                })
-            })
+            return cacheRes || fetch(evt.request)
         })
     )
     // console.log('Fetch event processed.')
 })
-
-// self.addEventListener('fetch', evt => { 
-//     // console.log('Fetch Events:', evt) 
-//     evt.respondWith(
-//         caches.match(evt.request).then(cacheRes => {
-//             return cacheRes || fetch(evt.request).then(fetchRes => {
-//                 return caches.open(dynamicCacheName).then(cache => {
-//                     cache.put(evt.request.url, fetchRes.clone())
-//                     return fetchRes
-//                 })
-//             })
-//         })
-//     )
-// })
