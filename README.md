@@ -37,6 +37,9 @@ https://www.figma.com/file/zBX8YoUKD0slplxnrkFstl/Internet-Link-Monitoring?type=
 - Data usage meter.
 
 # Versioning
+2.0.20
+- Non-code changes.
+- About page removed.
 2.0.19
 - Non-code changes.
 - Temp about page added (link in index, img asset).
