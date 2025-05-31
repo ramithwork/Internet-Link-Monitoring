@@ -1,7 +1,7 @@
 # Internet-Link-Monitoring
 A PWA (Progressive Web App) that monitors browser internet connectivity. Sends notifications when connected/disconnected. Maintain and export log.
 
-App: https://4uwebsite.github.io/Internet-Link-Monitoring/
+App: https://ramithwork.github.io/Internet-Link-Monitoring/[https://ramithwork.github.io/Internet-Link-Monitoring/] 
 
 # Features:
 - Internet connected/disconnected status.
